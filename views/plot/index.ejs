@@ -1,0 +1,14 @@
+<h1>My Daikin temperature board</h1>
+
+<h2>Current status</h2>
+<ul>
+  <li><strong>Outdoor:</strong> <%= sensor.outdoorTemp %> &deg;C</li>
+  <li><strong>Indoor:</strong> <%= sensor.indoorTemp %> &deg;C</li>
+  <li><strong>Frequeny:</strong> <%= sensor.frequency %> Hz</li>
+  <li><strong>Date:</strong> <%= sensor.createdAt %></li>
+</ul>
+
+<h2>Plot</h2>
+<div id="visualization"></div>
+
+

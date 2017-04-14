@@ -11,6 +11,12 @@
 
 module.exports.bootstrap = function(cb) {
 
+  if (sails.config.daikin.host.length == 0)
+      return cb('Error: daikin.host must be configured. Add it to local.js!');
+
+  if (sails.config.plotly.user.length == 0)
+      return cb('Error: plotly.user and plotly.key must be configured. Add it to local.js!');
+
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
 

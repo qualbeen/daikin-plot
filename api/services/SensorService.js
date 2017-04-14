@@ -5,7 +5,7 @@
 var collect = function(cb){
 
   var request = require('request');
-  request('http://qualbeen.asuscomm.com:30303/aircon/get_sensor_info', function (err, response, body) {
+  request(sails.config.daikin.host + '/aircon/get_sensor_info', function (err, response, body) {
     if (err)
       return cb(err);
 

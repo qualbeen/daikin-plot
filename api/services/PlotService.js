@@ -76,9 +76,7 @@ var uploadSensor = function (sensor, cb) {
 
 var plot = function(graph, extend, cb){
 
-  var plotly = require('plotly')('qualbeen','zim4g6jggl');
-  // var data = [{x:[], y:[], stream:{token:'yourStreamtoken', maxpoints:200}}];
-
+  var plotly = require('plotly')(sails.config.plotly.user, sails.config.plotly.key);
   var graphOptions = {
     fileopt : extend ? "extend" : "overwrite",
     filename : "daikin-plot",
